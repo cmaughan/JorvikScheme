@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Console">
+      <UniqueIdentifier>{4764f39a-221c-42e5-9201-a6c05079fdeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scheme">
+      <UniqueIdentifier>{8dbf7d64-338c-4183-a10f-6f621fb87adb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Interpreter\SchemeInit.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\Cell.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\Errors.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\Interpreter.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\Scope.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\Symbol.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\Tokenizer.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\Parser.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\Intrinsics.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\Evaluator.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter\CellAllocator.h">
+      <Filter>Scheme</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Console\main.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Interpreter\Cell.cpp">
+      <Filter>Scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpreter\Errors.cpp">
+      <Filter>Scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpreter\Interpreter.cpp">
+      <Filter>Scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpreter\Scope.cpp">
+      <Filter>Scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpreter\Tokenizer.cpp">
+      <Filter>Scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpreter\Parser.cpp">
+      <Filter>Scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpreter\Intrinsics.cpp">
+      <Filter>Scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpreter\Evaluator.cpp">
+      <Filter>Scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpreter\CellAllocator.cpp">
+      <Filter>Scheme</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>

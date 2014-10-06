@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\Interpreter\Tests\CellTests.cpp">
+      <Filter>Interpreter\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Tests\TokenizeTests.cpp">
+      <Filter>Interpreter\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Tests\EvaluateTests.cpp">
+      <Filter>Interpreter\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Tests\ParseTests.cpp">
+      <Filter>Interpreter\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\googletest\src\gtest_main.cc" />
+    <ClCompile Include="..\googletest\src\gtest-all.cc" />
+    <ClCompile Include="..\Interpreter\Cell.cpp">
+      <Filter>Interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Errors.cpp">
+      <Filter>Interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Evaluator.cpp">
+      <Filter>Interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Interpreter.cpp">
+      <Filter>Interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Intrinsics.cpp">
+      <Filter>Interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Parser.cpp">
+      <Filter>Interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Scope.cpp">
+      <Filter>Interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\Tokenizer.cpp">
+      <Filter>Interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interpreter\CellAllocator.cpp">
+      <Filter>Interpreter</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Interpreter">
+      <UniqueIdentifier>{fc3b0769-61b2-4bbc-adab-ce41ae60bfe3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interpreter\Tests">
+      <UniqueIdentifier>{bf341369-69d8-4af9-9218-257fdbebbcbc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Interpreter\Cell.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\Errors.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\Evaluator.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\Interpreter.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\Intrinsics.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\Parser.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\SchemeInit.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\Scope.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\Symbol.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\Tokenizer.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interpreter\CellAllocator.h">
+      <Filter>Interpreter</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
