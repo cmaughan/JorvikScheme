@@ -16,20 +16,20 @@ the lisp/scheme language.  Mostly it was useful for refreshing my language inter
 Mostly inspired by Peter Norvig's Python Intepreter (improved version):  [lispy2](http://norvig.com/lispy2.html)  
 I also took inspiration from Anthony Hay's conversion of Norvig's simpler version Scheme Interpreter [Lisp in 90 lines of c](http://howtowriteaprogram.blogspot.co.uk/2010/11/lisp-interpreter-in-90-lines-of-c.html)  
 
-My version is intended to be much like Norvig's second version, with the additional error checking, support for booleans, etc.
+My version is intended to be much like Norvig's second version, with the additional error checking, support for booleans and other refinements.
 I stopped short at adding the macro support, because I wanted to to the 'full' scheme template version, but haven't got around to it.  One day...
 That stuff is pretty hard, and I don't have time.
 
-The implementation is split pretty cleanly between tokenizing, parsing and interpreting.  It might be useful if you're trying to understand how that might be implemented.
+The implementation is split pretty cleanly between tokenizing, parsing and interpreting.  It might be useful if you're trying to understand how that typically works in practice.
 I make no claim that this is either fast, lean or complete!
 
 Unlike some implementations (such as Hay's), this interpereter uses linked lists of cells, instead of arrays.  That means that for the most part it supports 'dotted pairs', and will print them as such.
-To make it fast, it uses a custom allocator to make the cells, and they are reasonably small units of memory (32 bytes).  They could be a little smaller with some effort too.
+To make it fast, it uses a custom allocator to for the cells, and they are reasonably small units of memory (32 bytes).  They could be a little smaller with some effort too.
 
-The tokenizer just splits up the input into known tokens, such as '(', '5', 'define', etc.  
-The parser 'massages' the input cells to do things like convert 'define' to 'lambda', and various other things to make the intepreter's job easier, along with checking for syntax errors.  
-The intepreter does the work of running the code, calling the functions, etc.  
-The 'Evaluator' wraps all the stages into a convenient bundle and maintains global scope.  
+The **tokenizer** just splits up the input into known tokens, such as '(', '5', 'define', etc.  
+The **parser** 'massages' the input cells to do things like convert 'define' to 'lambda', and various other things to make the intepreter's job easier, along with checking for syntax errors.  
+The **intepreter** does the work of running the code, calling the functions, etc.  
+The **evaluator** wraps all the stages into a convenient bundle and maintains global scope.  
 
 To use the code, you just create an evaluator, and call 'Evaluate' with your input string.  The resulting Cell* can be printed using ToString().
 Note that the Console implementation splits up the stages to make it easier to debug.
@@ -37,7 +37,7 @@ Note that the Console implementation splits up the stages to make it easier to d
 Calling the outside world is easy to do, by simply making an intrinsic function (see Intrinsics.cpp).  It's easy to embed this interpreter, but IMHO, you're 
 better off with something like Lua for that ;)
 
-The CellAllocator was also an exercise in understanding how to build a mark and sweep allocator, since I don't recall having done that before.
+The **CellAllocator** was also an exercise in understanding how to build a mark and sweep allocator, since I don't recall having done that before.
 The algorithm simply walks out from each entry in the global scope until it has marked all cells that are reachable.  Then it 'frees' any that are left in the heap.
 The allocator can either maintain a free list, or just malloc/free cells on demand.  It isn't safe to call the garbage collector during evaluation, only afterwards.
 To enable that to work you have to worry about temporary cells and not collecting things that are currently in use. 
