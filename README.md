@@ -1,19 +1,20 @@
 Jorvik Scheme
 ======
 
-A simple cheme interpreter.  
+A simple Scheme interpreter.  
 
-<b>Requires:</b></br>
-C++ 11 (with support for std::regex)</br>
-Google Mock/Test for unit tests (submodules in the project)</br>
+**Requires**
+
+* C++ 11 (with support for std::regex)  
+* Google Mock/Test for unit tests (submodules in the project)  
 
 Details
 --------
 The aim here is a small, simple, scheme implementation.  I used it as a learning exercise for TDD, and to help me learn a bit more about
 the lisp/scheme language.  Mostly it was useful for refreshing my language interpreter knowledge.  But also great fun to do.
 
-Mostly inspired by Peter Norvig's Python Intepreter (improved version):  [lispy2](http://norvig.com/lispy2.html)</br>
-I also took inspiration from Anthony Hay's conversion of Norvig's simpler version Scheme Interpreter [Lisp in 90 lines of c](http://howtowriteaprogram.blogspot.co.uk/2010/11/lisp-interpreter-in-90-lines-of-c.html)</br>
+Mostly inspired by Peter Norvig's Python Intepreter (improved version):  [lispy2](http://norvig.com/lispy2.html)  
+I also took inspiration from Anthony Hay's conversion of Norvig's simpler version Scheme Interpreter [Lisp in 90 lines of c](http://howtowriteaprogram.blogspot.co.uk/2010/11/lisp-interpreter-in-90-lines-of-c.html)  
 
 My version is intended to be much like Norvig's second version, with the additional error checking, support for booleans, etc.
 I stopped short at adding the macro support, because I wanted to to the 'full' scheme template version, but haven't got around to it.  One day...
@@ -25,10 +26,10 @@ I make no claim that this is either fast, lean or complete!
 Unlike some implementations (such as Hay's), this interpereter uses linked lists of cells, instead of arrays.  That means that for the most part it supports 'dotted pairs', and will print them as such.
 To make it fast, it uses a custom allocator to make the cells, and they are reasonably small units of memory (32 bytes).  They could be a little smaller with some effort too.
 
-The tokenizer just splits up the input into known tokens, such as '(', '5', 'define', etc. </br>
-The parser 'massages' the input cells to do things like convert 'define' to 'lambda', and various other things to make the intepreter's job easier, along with checking for syntax errors. </br>
-The intepreter does the work of running the code, calling the functions, etc. </br>
-The 'Evaluator' wraps all the stages into a convenient bundle and maintains global scope. </br>
+The tokenizer just splits up the input into known tokens, such as '(', '5', 'define', etc.  
+The parser 'massages' the input cells to do things like convert 'define' to 'lambda', and various other things to make the intepreter's job easier, along with checking for syntax errors.  
+The intepreter does the work of running the code, calling the functions, etc.  
+The 'Evaluator' wraps all the stages into a convenient bundle and maintains global scope.  
 
 To use the code, you just create an evaluator, and call 'Evaluate' with your input string.  The resulting Cell* can be printed using ToString().
 Note that the Console implementation splits up the stages to make it easier to debug.
@@ -43,10 +44,11 @@ To enable that to work you have to worry about temporary cells and not collectin
 
 Useful Commands
 ---------------
-(debug 1) in the REPL will let you see the memory usage, along with the symbol table.</br>
-(symbols) shows all symbol table entries</br>
-(variables) to see all variables at global scope.</br>
-All other intrinsic functions are declared in Intrinsics.cpp, and some functions are in the startup script in SchemeInit.h
+* (debug 1) in the REPL will let you see the memory usage, along with the symbol table.  
+* (symbols) shows all symbol table entries.  
+* (variables) to see all variables at global scope.  
+
+All other intrinsic functions are declared in Intrinsics.cpp, and some functions are in the startup script in SchemeInit.h  
 
 Tests
 -----
@@ -57,8 +59,8 @@ I have a VC plugin that adds the tests to the test explorer and runs them automa
 
 Missing stuff
 -------------
-Macros </br>
-Complex/Hex numbers </br>
-Bignums </br>
-Library functions (since macro support is usually used to implement them) </br>
+* Macros  
+* Complex/Hex numbers  
+* Bignums  
+* Library functions (since macro support is usually used to implement them)  
 
