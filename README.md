@@ -10,17 +10,17 @@ A simple Scheme interpreter.
 
 Details
 --------
-The aim here is a small, simple, scheme implementation.  I used it as a learning exercise for TDD, and to help me learn a bit more about
+The aim here is a small, simple, scheme implementation.  I used it as a learning exercise for TDD and to help me learn a bit more about
 the lisp/scheme language.  Mostly it was useful for refreshing my language interpreter knowledge.  But also great fun to do.
 
-Mostly inspired by Peter Norvig's Python Intepreter (improved version):  [lispy2](http://norvig.com/lispy2.html)  
+Inspired by Peter Norvig's Python Intepreter (improved version):  [lispy2](http://norvig.com/lispy2.html)  
 I also took inspiration from Anthony Hay's conversion of Norvig's simpler version Scheme Interpreter [Lisp in 90 lines of c](http://howtowriteaprogram.blogspot.co.uk/2010/11/lisp-interpreter-in-90-lines-of-c.html)  
 
 My version is intended to be much like Norvig's second version, with the additional error checking, support for booleans and other refinements.
 I stopped short at adding the macro support, because I wanted to to the 'full' scheme template version, but haven't got around to it.  One day...
 That stuff is pretty hard, and I don't have time.
 
-The implementation is split pretty cleanly between tokenizing, parsing and interpreting.  It might be useful if you're trying to understand how that typically works in practice.
+The implementation is split cleanly between tokenizing, parsing and interpreting.  It might be useful if you're trying to understand how that typically works in practice.
 I make no claim that this is either fast, lean or complete!
 
 Unlike some implementations (such as Hay's), this interpereter uses linked lists of cells, instead of arrays.  That means that for the most part it supports 'dotted pairs', and will print them as such.
