@@ -23,7 +23,7 @@ That stuff is pretty hard, and I don't have time.
 The implementation is split cleanly between tokenizing, parsing and interpreting.  It might be useful if you're trying to understand how that typically works in practice.
 I make no claim that this is either fast, lean or complete!
 
-Unlike some implementations (such as Hay's), this interpereter uses linked lists of cells, instead of arrays.  That means that for the most part it supports 'dotted pairs', and will print them as such.
+Unlike some implementations (such as Hay's), this interpereter uses linked lists of cells, instead of arrays.  That means for the most part it supports 'dotted pairs', and will print them as such.
 To make it fast, it uses a custom allocator to for the cells, and they are reasonably small units of memory (32 bytes).  They could be a little smaller with some effort too.
 
 The **tokenizer** just splits up the input into known tokens, such as '(', '5', 'define', etc.  
@@ -64,3 +64,4 @@ Missing stuff
 * Bignums  
 * Library functions (since macro support is usually used to implement them)  
 
+In general, this is for interest only.  There are better options if you want a Scheme interpreter in your app...
